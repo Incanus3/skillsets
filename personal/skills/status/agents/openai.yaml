@@ -1,7 +1,7 @@
 interface:
   display_name: "Workstream Status"
-  short_description: "Summarize a recorded workstream handoff"
-  default_prompt: "Use $status to report the recorded state of a workstream."
+  short_description: "Summarize a recorded or recently listed workstream"
+  default_prompt: "Use $status to report a workstream's recorded or recently listed state."
 
 policy:
   allow_implicit_invocation: false
