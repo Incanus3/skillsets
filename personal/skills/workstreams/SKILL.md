@@ -65,8 +65,11 @@ line per workstream when practical:
 1. [parked · P1] session-capture-v0 — Decide the completed five-run capture trial. Next: choose retain, revise, automate, or reject.
 ```
 
-- Treat the numbers as ephemeral selectors for an immediately following `$resume <n>` or
-  `$status <n>` invocation, not as persistent workstream identifiers.
+- Treat the numbers as ephemeral selectors for a following `$resume <n>` or `$status <n>`
+  invocation, not as persistent workstream identifiers. Successful read-only `$status <n>`
+  inspections resolved from this overview preserve its selector mapping for a subsequent
+  `$status <n>` or `$resume <n>`; any other intervening interaction makes the overview stale, and
+  a later `$workstreams` response supersedes it even when that response is empty.
 - Put state and priority inside the opening brackets. Omit `· Pn` when no bead supplies a priority.
 - Use the handoff slug for a merged workstream and the bead ID for a bead-only workstream.
 - Use the handoff objective or bead title as the concise description.
@@ -74,5 +77,6 @@ line per workstream when practical:
   `Next: unknown` rather than inventing an action.
 - Do not expose raw source labels such as `handoff`, `br`, `open`, or `ready` as additional states.
 
-After a non-empty overview, report `Resume with $resume <n> or inspect with $status <n>.` If no
-entries exist, report `No current or ready workstreams.` without the selector hint.
+After a non-empty overview, report `Resume with $resume <n> or inspect with $status <n>; after an
+inspection, the same number remains available to $resume <n>.` If no entries exist, report `No
+current or ready workstreams.` without the selector hint.
