@@ -15,9 +15,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/computer-use/SKILL.md",
-      "skillFolderHash": "306c0f8cb63bcac265a5b7975dc2f855be4f1344",
+      "skillFolderHash": "fab1436f0d73889492279544eadebc9bcc2694b6",
       "installedAt": "2026-07-17T06:35:37.143Z",
-      "updatedAt": "2026-07-17T06:35:37.143Z"
+      "updatedAt": "2026-09-07T17:54:45.282Z"
     },
     "code-review-excellence": {
       "source": "wshobson/agents",
@@ -33,18 +33,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "ded93000a5f654e2b4f324501282459bd56afe19",
+      "skillFolderHash": "0c90a5b8b422a93ca806af6df3b65445ab5b2072",
       "installedAt": "2026-07-17T06:35:37.149Z",
-      "updatedAt": "2026-07-17T06:35:37.149Z"
+      "updatedAt": "2026-09-07T17:55:03.823Z"
     },
     "orchestration": {
       "source": "stablyai/orca",
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orchestration/SKILL.md",
-      "skillFolderHash": "086c41e0b353b4908d2963694b4a7c791d4b3982",
+      "skillFolderHash": "ebd864919dd8cab9d7049fc624c9afeebce2767c",
       "installedAt": "2026-07-17T06:35:37.155Z",
-      "updatedAt": "2026-07-17T06:35:37.155Z"
+      "updatedAt": "2026-09-07T17:55:23.697Z"
     },
     "onevcat-jj": {
       "source": "onevcat/skills",
