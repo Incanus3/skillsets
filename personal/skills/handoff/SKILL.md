@@ -1,6 +1,6 @@
 ---
 name: handoff
-description: "Maintain concise, short-lived workstream handoffs in `docs/handoffs/`. Use automatically when meaningful work changes what a fresh session needs to continue, including after completing a design, plan, or implementation phase, changing direction, finding a blocker, or making relevant decisions or discoveries; when a session resumed from a handoff and its continuation state changes; when a workstream with an existing handoff completes; or when context-window pressure threatens continuity. Also use for `$handoff` and explicit natural-language requests to prepare work for a new session."
+description: "Maintain concise, short-lived workstream handoffs in `docs/handoffs/`. Use automatically when meaningful work changes what a fresh session needs to continue, including after completing a design, plan, or implementation phase, changing direction, finding a blocker, or making relevant decisions or discoveries; when a session resumed from a handoff and its continuation state changes; when the operator explicitly confirms completion of a workstream with an existing handoff; or when context-window pressure threatens continuity. Also use for `$handoff` and explicit natural-language requests to prepare work for a new session."
 ---
 
 # Maintain a workstream handoff
@@ -24,7 +24,8 @@ Treat the workstream slug as the public identity. Store it internally at
   command conditionally.
 
 Do not create or refresh a handoff for routine progress, small edits, or details that do not affect
-resumption. Do not create one when the workstream is complete and nothing remains to resume.
+resumption. Do not create one when the operator has explicitly confirmed workstream completion and nothing
+remains to resume.
 
 ## Resolve the workstream
 
@@ -48,7 +49,28 @@ Before writing the handoff, harvest durable results into their owning systems:
 Link those authorities from the handoff. Do not copy their full content or turn the handoff into a
 task tracker.
 
-## Write only the resume delta
+## Preserve agreed continuation state
+
+Preserve the operator-agreed execution sequence, dependencies, pending decisions, and
+authorization or verification gates across handoff updates. Agreed remaining work is not
+speculative backlog.
+
+Every updated handoff must include the agreed remaining steps in order and the current position,
+or link to a canonical document containing the complete sequence. Keep agreed unfinished steps
+even when they lie beyond the immediate next increment. Preserve each step's dependencies and gates.
+When asked to shorten a handoff, compress each agreed unfinished step rather than omitting it.
+
+Update the current position and retire completed instructions without dropping unfinished
+commitments. Concision must not erase information needed to continue the agreed work.
+
+Before removing or materially shortening such information, verify that it is completed,
+explicitly superseded, or preserved in a canonical document linked from the handoff. Repository
+history alone is not sufficient preservation.
+
+Review the handoff diff before finishing: account for every removed commitment or gate and verify
+that the remaining sequence is still discoverable.
+
+## Write the current resume state
 
 Keep the handoff concise and current. Include:
 
@@ -56,7 +78,7 @@ Keep the handoff concise and current. Include:
 - objective and intended outcome;
 - durable references, including the relevant task identifier when one exists;
 - current checkpoint and what is already complete;
-- immediate next actions in order;
+- immediate next actions in order, the operator-agreed remaining sequence, and current position;
 - blockers, pending decisions, prerequisites, and constraints;
 - latest verification evidence and unresolved uncertainty;
 - failed attempts or temporary assumptions only when needed to prevent repeated work;
@@ -68,10 +90,15 @@ revision, bookmark, branch, or caution needed to resume safely.
 
 ## Retire completed handoffs
 
-When a workstream completes, first capture any remaining durable information and update its
-authoritative task state. Then remove or archive its handoff according to repository policy and
-synchronize any handoff index or resume-command registry. Do not leave an active handoff for work
-that has nothing left to resume.
+Retire a handoff only after the operator explicitly confirms that the workstream is complete.
+Passed checks, completed plan steps, closed tasks, commits, pushes, merge or deployment do not
+substitute for that confirmation. Without it, keep the handoff current with the verified baseline,
+remaining steps and gates, or the pending decision about what comes next.
+
+After explicit confirmation, capture remaining durable information and update authoritative task
+state before removing or archiving the handoff according to repository policy. Synchronize its
+index or resume-command registry. Retire completed handoffs only when nothing remains to resume;
+if confirmation conflicts with known unfinished commitments, resolve that scope with the operator.
 
 ## Synchronize and verify
 
@@ -83,4 +110,5 @@ For an explicit handoff request, finish by returning `$resume <slug>` without bl
 formatting. Under context pressure, phrase it conditionally, such as: "If you decide to continue in
 a fresh session: `$resume <slug>`." For automatic maintenance, do not print the command.
 
-Do not commit, push, or alter unrelated task state unless separately requested.
+Handoff maintenance does not itself authorize committing or pushing. Preserve any authorization
+already established by the user or active workflow. Do not alter unrelated task state.
