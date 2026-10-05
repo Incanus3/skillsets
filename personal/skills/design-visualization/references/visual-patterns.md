@@ -24,9 +24,11 @@ These are available patterns, not required sections. Use a small diagram or comp
 - State source revision/provenance and distinguish assumptions, proposals and verified evidence. The presentation does not itself authorize implementation or external action.
 - Mark literal paths, commands, identifiers, configuration keys and raw values with `<code>`. Inline literals use a neutral bordered background and monospace text; use `.code-block` for standalone snippets, or semantic `pre`/`code` for preformatted blocks. Preserve exact text and allow long inline strings to wrap. Do not apply code styling to ordinary prose or use status colors for literals.
 - Keep semantic headings, real anchors, table headers/captions and meaningful navigation labels. CSS provides visible keyboard focus, reduced-motion support and print styling.
-- At widths below 1100px state columns fold beneath steps. Below 760px panels stack and sticky navigation becomes an inline link group; source/authority notes remain visible. Inspect a desktop and narrow viewport after adapting content. Check readability, overflow, transition labels, source links and decision/outcome labels. A dense table may scroll inside its wrapper, never the whole page.
+- Inspect the adapted content at a representative desktop width. Check readability, overflow, transition labels, source links and decision/outcome labels. A dense table may scroll inside its wrapper rather than the whole page. The bundled CSS also folds state columns below 1100px and stacks panels/navigation below 760px; these existing behaviors do not require mobile adaptation or small-viewport verification.
 
-## Optional comparison layouts on narrow screens
+## Optional responsive comparison patterns (only when requested)
+
+Skip this section during ordinary desktop companion generation. Use these patterns and inspect narrow layouts only when the operator explicitly requests small-screen support.
 
 Choose a mode per table; do not apply either modifier globally or combine them. Use dense scrolling when readers need to compare columns across rows. Use stacked labeled rows when each row is a self-contained state or alternative and narrow columns would fragment its explanation. The base `.comparison` remains suitable for short, sparse tables.
 
@@ -54,4 +56,4 @@ For labeled mobile rows, add `.comparison-stack` to the table and `data-label` t
 </div>
 ```
 
-Inspect the actual chosen mode at a narrow viewport. Confirm the scroll hint is visible, the scroll region is keyboard accessible, and stacked labels match the headers without hiding decision or outcome text. Preserve the desktop comparison and source links.
+When small-screen support is requested, inspect the actual chosen mode at a narrow viewport. Confirm the scroll hint is visible, the scroll region is keyboard accessible, and stacked labels match the headers without hiding decision or outcome text. Preserve the desktop comparison and source links.

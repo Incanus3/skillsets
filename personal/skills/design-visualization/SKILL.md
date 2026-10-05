@@ -36,7 +36,11 @@ the components for the explanation without redesigning the page's visual vocabul
 Read [visual-patterns.md](references/visual-patterns.md) for component usage and selection. Inspect
 [reference.html](assets/reference.html) for a complete worked example of the shared presentation.
 
-Use the sidebar on multi-section desktop views; retain compact navigation on narrow screens. Choose section titles
+Desktop review is the default. Do not spend generation or verification effort on mobile layouts, responsive
+adaptations or small-viewport checks unless the operator explicitly requests them. Existing responsive CSS may
+remain in the shared assets; it does not create a requirement to adapt or test narrow layouts.
+
+Use the sidebar on multi-section desktop views. Choose section titles
 for actual content. Where applicable, keep recurring topics in a familiar order: scope/ownership, behavior,
 failure/recovery, trade-offs, evidence. Merge, omit or rearrange topics when the design requires it; do not fill empty
 sections or reproduce the example's section count, branch count or central diagram.
@@ -60,7 +64,7 @@ not duplicate the specification as a long decorated page.
   and section anchors, plus the unchanged Markdown. Identify its source revision or hash; keep private source local.
 - Update the companion when its source changes; make a stale snapshot explicit rather than silently presenting it
   as current. Preserve useful section anchors across revisions. Keep generation instructions out of final output.
-- Render and inspect the top and central/lower views at desktop and narrow widths. Check wrapping, overflow,
+- Render and inspect the top and central/lower views at a representative desktop width. Check wrapping, overflow,
   navigation, status legibility and diagram labels. Check source anchors and compare summaries against the source,
   especially failures, recovery and proposed versus accepted decisions. Report material limitations.
 - Deliver a standalone local artifact and preview when available. Use the host's relevant browser capability; this
