@@ -26,6 +26,22 @@ Select and combine patterns as needed. Include conditions, direction, failure pa
 change the meaning. If a small design is already clear, explain that briefly instead of generating a redundant page.
 An explicit request for HTML still receives a proportionate companion.
 
+## Use the diagram specialist
+
+When a diagram helps, read and apply the installed `diagram-design` skill for type selection, layout, connectors and
+accessible SVG. In this setup it lives at `~/.agents/skillsets/always-on/skills/diagram-design/SKILL.md`.
+Load only the relevant type and semantic-pattern references. Draw the relationships, participants or state transitions
+explicitly; a stack of prose rows with arrows is not a substitute when those relationships are the review question.
+Keep ordinary comparisons and exact contracts in tables where they work better.
+
+This skill owns the companion's presentation and review contract. Our assets are the already-selected style guide:
+use their dark palette, system fonts, local CSS, static default and desktop verification rather than upstream branding,
+font, single-file or viewport defaults. Choose type and size autonomously; do not repeat onboarding, profile-save or
+type-confirmation prompts when the design supplies enough context. Leave the managed upstream skill unmodified.
+
+When updating an existing companion, retain its diagram type, participant positions and visual conventions while they
+still explain the design clearly. Change them when the design or review question warrants it, rather than for variety.
+
 ## Reuse the presentation
 
 Use [assets/shell.html](assets/shell.html) and [assets/review.css](assets/review.css) as the presentation foundation.
