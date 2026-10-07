@@ -1,6 +1,6 @@
 # Review presentation patterns
 
-Use `assets/review.css` with local HTML. `assets/shell.html` is a substitution template; `assets/reference.html` is a complete fictional worked example. Copy the CSS beside generated HTML (or embed its contents), keeping the output usable offline. No fonts, scripts, libraries or remote resources are required.
+Use `assets/review.css` with local HTML. `assets/shell.html` is a substitution template; `assets/reference.html` is a complete fictional worked example. Copy the CSS beside generated HTML (or embed its contents), keeping the output usable offline. No fonts, scripts, libraries or remote resources are required to read the page. The shell includes optional CDN syntax highlighting; its token colors and plain-code fallback live in the local CSS.
 
 ## Choose components by the review question
 

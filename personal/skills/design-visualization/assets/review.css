@@ -32,3 +32,15 @@
 /* Inline machine literals: neutral cues distinct from decision and outcome colors. */
 code:not(.code-block):not(pre code){color:#d5e2ed;background:#202b35;border:1px solid #3c4d5b;border-radius:4px;padding:.08em .3em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 @media print{code:not(.code-block):not(pre code),.code-block{color:#17212a;background:#f1f3f5;border-color:#bdc7cf}}
+
+/* Optional Highlight.js tokens; code layout and plain-text fallback stay local. */
+pre.code-block code{font-size:inherit;white-space:inherit}
+.hljs{color:var(--ink)}
+.hljs-comment,.hljs-quote{color:var(--muted);font-style:italic}
+.hljs-keyword,.hljs-selector-tag,.hljs-literal,.hljs-built_in{color:var(--rose)}
+.hljs-string,.hljs-regexp,.hljs-addition{color:var(--mint)}
+.hljs-number,.hljs-symbol,.hljs-bullet,.hljs-variable,.hljs-template-variable{color:var(--amber)}
+.hljs-title,.hljs-attr,.hljs-attribute,.hljs-selector-id,.hljs-selector-class,.hljs-type{color:var(--blue)}
+.hljs-meta{color:var(--amber)}.hljs-deletion{color:var(--rose)}
+.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
+@media print{.hljs,.hljs span{color:inherit!important}}

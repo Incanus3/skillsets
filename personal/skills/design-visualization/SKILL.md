@@ -70,6 +70,21 @@ Static views are the default. Add interaction only when it answers a concrete qu
 views. Essential reasoning remains readable without the interaction. A visualization should expose relationships,
 not duplicate the specification as a long decorated page.
 
+## Highlight code blocks optionally
+
+For fenced code, use `<pre class="code-block"><code class="language-json">…</code></pre>` with the actual language
+and HTML-escaped source text. Keep inline literals unchanged. Retain the shell's pinned, asynchronous Highlight.js
+CDN script when code blocks benefit from highlighting; omit it when there are no such blocks. The local CSS owns
+layout and token colors. Highlight only explicitly labeled languages supported by the loaded bundle; unknown or
+unlabeled blocks remain plain text, without auto-detection or extra grammar downloads.
+
+Highlighting is an optional network enhancement, not a requirement for reading the artifact. Preserve code text and
+layout when the CDN is unavailable or JavaScript is disabled. Do not add loading indicators or wait for highlighting
+before rendering content. The bundled integration's online, blocked-CDN and JavaScript-disabled behavior has been
+verified during skill development. During ordinary companion generation, inspect the page's rendering; do not repeat
+offline, blocked-CDN or JavaScript-disabled tests, probe CDN availability, or install a local fallback. Repeat these
+integration checks only when changing the highlighting loader or fallback behavior.
+
 ## Preserve authority and verify
 
 - Show source title/link and revision or snapshot provenance. Link condensed claims to exact source sections. State

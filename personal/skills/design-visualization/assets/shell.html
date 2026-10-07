@@ -31,5 +31,9 @@
     </main>
   </div>
 </div>
+<!-- Optional enhancement: blocked CDN requests leave code readable without highlighting. -->
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.12.0/highlight.min.js"
+  integrity="sha384-wjfDDhOPPdjtva8vWBhWeVprSpmxisEu5aYT3q1JyACqXpdKpo3PWZTMVq24MBix" crossorigin="anonymous"
+  onload="document.querySelectorAll('pre code').forEach(block => { const language = [...block.classList].find(name => name.startsWith('language-'))?.slice(9); if (language &amp;&amp; hljs.getLanguage(language)) hljs.highlightElement(block); });"></script>
 </body>
 </html>
