@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/ayghri/i-have-adhd.git",
       "skillPath": "skills/i-have-adhd/SKILL.md",
-      "skillFolderHash": "72dc6e3e9d0f8d906579a235edb7b2a402d7b8e1",
+      "skillFolderHash": "759f1e56d0d2fdd3819d2a53b81e72767c08d914",
       "installedAt": "2026-09-09T09:25:32.681Z",
-      "updatedAt": "2026-09-15T09:18:27.335Z"
+      "updatedAt": "2026-10-14T09:41:18.315Z"
     },
     "find-skills": {
       "source": "vercel-labs/skills",

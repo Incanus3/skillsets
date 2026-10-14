@@ -15,9 +15,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/computer-use/SKILL.md",
-      "skillFolderHash": "fab1436f0d73889492279544eadebc9bcc2694b6",
+      "skillFolderHash": "b59f27370a41225c22127e91da0c91cd2519f217",
       "installedAt": "2026-07-17T06:35:37.143Z",
-      "updatedAt": "2026-09-07T17:54:45.282Z"
+      "updatedAt": "2026-10-14T09:39:20.260Z"
     },
     "code-review-excellence": {
       "source": "wshobson/agents",
@@ -33,18 +33,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orca-cli/SKILL.md",
-      "skillFolderHash": "0c90a5b8b422a93ca806af6df3b65445ab5b2072",
+      "skillFolderHash": "572f7952ac451a30a9c2451b472a639b125ee584",
       "installedAt": "2026-07-17T06:35:37.149Z",
-      "updatedAt": "2026-09-07T17:55:03.823Z"
+      "updatedAt": "2026-10-14T09:39:36.192Z"
     },
     "orchestration": {
       "source": "stablyai/orca",
       "sourceType": "github",
       "sourceUrl": "https://github.com/stablyai/orca.git",
       "skillPath": "skills/orchestration/SKILL.md",
-      "skillFolderHash": "ebd864919dd8cab9d7049fc624c9afeebce2767c",
+      "skillFolderHash": "b0cd1d58b0c317cf7c3726fef7e6b1197c405246",
       "installedAt": "2026-07-17T06:35:37.155Z",
-      "updatedAt": "2026-09-07T17:55:23.697Z"
+      "updatedAt": "2026-10-14T09:39:52.750Z"
     },
     "onevcat-jj": {
       "source": "onevcat/skills",
@@ -60,9 +60,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/cathrynlavery/diagram-design.git",
       "skillPath": "skills/diagram-design/SKILL.md",
-      "skillFolderHash": "dc9745b0be384e9a9ff9b9dac08d8d609f7c2154",
+      "skillFolderHash": "d7d66b45810294ae98e8a2c1de72d4ce9af80616",
       "installedAt": "2026-10-06T19:11:12.724Z",
-      "updatedAt": "2026-10-06T19:11:12.724Z"
+      "updatedAt": "2026-10-14T09:39:58.963Z"
     }
   },
   "dismissed": {
