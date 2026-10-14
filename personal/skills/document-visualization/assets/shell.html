@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>{{DOCUMENT_TITLE}} — design review</title>
+  <title>{{DOCUMENT_TITLE}} — document companion</title>
   <link rel="stylesheet" href="review.css">
 </head>
 <body>
 <!-- TEMPLATE ONLY: replace every {{SLOT}} before sharing a generated view.
      Escape plain text; construct NAVIGATION_LINKS and REVIEW_SECTIONS as safe HTML.
      Choose sections from the actual review question, not a prescribed outline.
-     Remove the navigation/layout wrapper for a short single-section explanation. -->
+     Remove the navigation/layout wrapper for a short single-section explanation.
+     Omit OPTIONAL_CONTEXT_NOTE and its wrapper when the source needs no such note. -->
 <div class="review-wrap">
   <header class="review-mast">
     <div><span class="review-mark">{{TOPIC_LABEL}}</span><br>{{REVIEW_SCOPE}}</div>
-    <div>{{SOURCE_REVISION_AND_DECISION_STATUS}}</div>
+    <div>{{SOURCE_REVISION_AND_CONTEXT}}</div>
   </header>
   <div class="review-layout">
     <aside class="review-nav" aria-label="Review navigation">
@@ -25,7 +26,7 @@
     <main>
       <h1>{{DOCUMENT_TITLE}}</h1>
       <p class="lead">{{CONCRETE_TOPIC_AND_REVIEW_QUESTION}}</p>
-      <div class="callout callout-warning">{{DECISION_STATUS_AND_AUTHORIZATION_BOUNDARY}}</div>
+      <div class="callout">{{OPTIONAL_CONTEXT_NOTE}}</div>
       {{REVIEW_SECTIONS}}
       <footer class="review-footer">{{SOURCE_PROVENANCE_AND_REMAINING_UNCERTAINTY}}</footer>
     </main>

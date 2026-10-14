@@ -1,8 +1,8 @@
 # Review presentation patterns
 
-Use `assets/review.css` with local HTML. `assets/shell.html` is a substitution template; `assets/reference.html` is a complete fictional worked example. Copy the CSS beside generated HTML (or embed its contents), keeping the output usable offline. No fonts, scripts, libraries or remote resources are required to read the page. The shell includes optional CDN syntax highlighting; its token colors and plain-code fallback live in the local CSS.
+Use `assets/review.css` with local HTML. `assets/shell.html` is a substitution template; `assets/reference.html` is a complete fictional technical-design worked example, not a required document outline. Copy the CSS beside generated HTML (or embed its contents), keeping the output usable offline. No fonts, scripts, libraries or remote resources are required to read the page. The shell includes optional CDN syntax highlighting; its token colors and plain-code fallback live in the local CSS.
 
-## Choose components by the review question
+## Choose components by the reader question
 
 | Question | Component | Required content |
 | --- | --- | --- |
@@ -13,14 +13,14 @@ Use `assets/review.css` with local HTML. `assets/shell.html` is a substitution t
 | What is decided? | `.status` plus `.status-accepted`, `.status-proposed`, `.status-rejected`, `.status-unresolved`, `.status-superseded` | Textual decision status drawn from the source. |
 | Where is an assumption or boundary? | `.callout`, `.callout-warning`, `.source-note` | Specific constraint and source link; do not manufacture warnings. |
 
-These are available patterns, not required sections. Use a small diagram or comparison alone when it answers the question. For multiple substantive sections, retain the familiar `.review-wrap`, `.review-mast`, `.review-layout`, `.review-nav`, `main` and `.review-footer` shell. Use direct technical headings naming the operation, condition or comparison.
+These are available patterns, not required sections. Use a small diagram or comparison alone when it answers the question. For multiple substantive sections, retain the familiar `.review-wrap`, `.review-mast`, `.review-layout`, `.review-nav`, `main` and `.review-footer` shell. Use direct headings suited to the source, naming the topic, operation, condition or comparison.
 
 ## Usage contract
 
 - Replace every shell slot before sharing. Plain text must be HTML-escaped; inserted markup must be constructed deliberately. Navigation links must resolve to unique section IDs. Source links must point to actual source locations or a clearly labeled embedded example contract.
 - Preserve the dark palette, system typography, generous spacing and bordered component boundaries. Use selective stripes only where the boundary has meaning. Do not add unrelated decoration or force source content into the reference example's outline.
-- Decision status and operation outcome are different dimensions. Use `status-*` for approval/decision state and `outcome-*` for observed or described execution state. An accepted decision is not a successful operation. Use text labels alongside color, including in flows and comparisons. Inherited describes provenance, not approval: show it with `.provenance-label` alongside an established decision status only when the source supports that status. Label an assumption as an assumption.
-- Flow cards alone do not communicate a flow. Add labeled transitions with conditions and failure paths. State what a failed or lost operation proves, what remains unknown and whether recovery changes only prepared state or active state.
+- Use decision-status and operation-outcome components only when the source contains those concepts; do not add an approval inventory to an ordinary report or guide. Decision status and operation outcome are different dimensions. Use `status-*` for approval/decision state and `outcome-*` for observed or described execution state. An accepted decision is not a successful operation. Use text labels alongside color, including in flows and comparisons. Inherited describes provenance, not approval: show it with `.provenance-label` alongside an established decision status only when the source supports that status. Label an assumption as an assumption.
+- Flow cards alone do not communicate a flow. Add labeled transitions with conditions and failure paths. For operational flows, state what a failed or lost operation proves, what remains unknown and which state recovery changes.
 - State source revision/provenance and distinguish assumptions, proposals and verified evidence. The presentation does not itself authorize implementation or external action.
 - Mark literal paths, commands, identifiers, configuration keys and raw values with `<code>`. Inline literals use a neutral bordered background and monospace text; use `.code-block` for standalone snippets, or semantic `pre`/`code` for preformatted blocks. Preserve exact text and allow long inline strings to wrap. Do not apply code styling to ordinary prose or use status colors for literals.
 - Keep semantic headings, real anchors, table headers/captions and meaningful navigation labels. CSS provides visible keyboard focus, reduced-motion support and print styling.
