@@ -1,8 +1,8 @@
 # Document visualization: rationale and evidence
 
 Accepted approach as of 2026-10-14. This record explains the choices and their evidence; maintained instructions live
-in the [document visualization skill](../../personal/skills/document-visualization/SKILL.md),
-[design visualization adapter](../../personal/skills/design-visualization/SKILL.md), and
+in the [document visualization skill](../../skills/document-visualization/SKILL.md),
+[design visualization adapter](../../skills/design-visualization/SKILL.md), and
 [design specification writing policy](/home/jakub/.agents/policies/design-spec-writing.md).
 
 ## Keep presentation familiar while adapting the explanation
