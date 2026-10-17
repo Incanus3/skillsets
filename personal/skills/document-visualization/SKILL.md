@@ -72,6 +72,14 @@ Static views are the default. Add interaction only when it answers a concrete qu
 views. Essential reasoning remains readable without the interaction. A visualization should expose relationships,
 not duplicate the source as a long decorated page.
 
+## Render task lists as read-only checkboxes
+
+Preserve Markdown task-list state in companions and HTML source snapshots: `- [ ]` becomes an empty checkbox,
+and `- [x]` or `- [X]` becomes a checked checkbox beside the item text. Use the static `.task-list` / `.task-box`
+pattern in [visual-patterns.md](references/visual-patterns.md), or an equivalent accessible read-only representation.
+Keep item order, nesting and text faithful. Do not render task markers as literal bracket text or ordinary bullets,
+infer completion from prose, or add controls that change the source state. Literal examples inside code remain unchanged.
+
 ## Highlight code blocks optionally
 
 For fenced code, use `<pre class="code-block"><code class="language-json">…</code></pre>` with the actual language
@@ -101,7 +109,9 @@ integration checks only when changing the highlighting loader or fallback behavi
 - Update the companion when its source changes; make a stale snapshot explicit rather than silently presenting it
   as current. Preserve useful section anchors across revisions. Keep generation instructions out of final output.
 - Render and inspect the top and central/lower views at a representative desktop width. Check wrapping, overflow,
-  navigation, status legibility and diagram labels. Check source anchors and compare summaries against the source,
-  especially qualifications, exceptions, uncertainty and any state or status distinctions. Report material limitations.
+  navigation, status legibility and diagram labels. For task lists, compare checked/unchecked states with the
+  source and confirm that the boxes are visible and cannot be toggled. Check source anchors and compare summaries
+  against the source, especially qualifications, exceptions, uncertainty and any state or status distinctions. Report
+  material limitations.
 - Deliver a standalone local artifact and preview when available. Use the host's relevant browser capability; this
   skill requires no particular browser tool. Creating a companion does not authorize publication or external actions.

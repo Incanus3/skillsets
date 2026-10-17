@@ -44,3 +44,11 @@ pre.code-block code{font-size:inherit;white-space:inherit}
 .hljs-meta{color:var(--amber)}.hljs-deletion{color:var(--rose)}
 .hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}
 @media print{.hljs,.hljs span{color:inherit!important}}
+
+/* Static task state: a box and optional tick, with accessible labels in the markup. */
+.task-list{list-style:none;padding-left:0;margin:15px 0}
+.task-list>li{position:relative;padding-left:1.75em;margin:8px 0}
+.task-list .task-list{margin:8px 0}
+.task-box{position:absolute;left:0;top:.3em;width:1em;height:1em;border:2px solid var(--muted);border-radius:2px;color:var(--ink)}
+.task-box-checked::after{content:"";position:absolute;left:.2em;top:.02em;width:.3em;height:.55em;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg)}
+@media print{.task-box{border-color:#364552;color:#17212a}}

@@ -26,6 +26,25 @@ These are available patterns, not required sections. Use a small diagram or comp
 - Keep semantic headings, real anchors, table headers/captions and meaningful navigation labels. CSS provides visible keyboard focus, reduced-motion support and print styling.
 - Inspect the adapted content at a representative desktop width. Check readability, overflow, transition labels, source links and decision/outcome labels. A dense table may scroll inside its wrapper rather than the whole page. The bundled CSS also folds state columns below 1100px and stacks panels/navigation below 760px; these existing behaviors do not require mobile adaptation or small-viewport verification.
 
+## Read-only task lists
+
+Use `.task-list` for Markdown task items and `.task-box` for their static checkbox shapes. Empty boxes represent
+`[ ]`; add `.task-box-checked` for `[x]` or `[X]`. The box is an image with an accessible state label, not a focusable
+control. No input, click handler or JavaScript is needed. Preserve source order, nesting and inline markup; place
+nested lists inside their parent `li`. Use ordinary lists for ordinary bullets and leave literal task syntax in code
+unchanged. The existing `.check-list` component displays evidence tags and does not represent task state.
+
+```html
+<ul class="task-list" aria-label="Source checklist">
+  <li><span class="task-box task-box-checked" role="img" aria-label="Checked"></span>Read the source document.</li>
+  <li><span class="task-box" role="img" aria-label="Unchecked"></span>Inspect the companion.</li>
+</ul>
+```
+
+Use the same rendering in HTML source snapshots. Check that long item text wraps beside the box, nested items retain
+their own state, and checked/unchecked shapes remain distinguishable without color. Do not invent task state for
+ordinary prose or imply that a source checkmark supplies approval or verification evidence beyond what it states.
+
 ## Optional responsive comparison patterns (only when requested)
 
 Skip this section during ordinary desktop companion generation. Use these patterns and inspect narrow layouts only when the operator explicitly requests small-screen support.

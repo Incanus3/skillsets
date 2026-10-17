@@ -17,6 +17,20 @@ requested smaller page titles and distinct inline-code styling, both retained in
 adaptation was rejected as unnecessary generation overhead; existing responsive CSS remains available when requested.
 These choices reflect operator preference, not measured improvement in review speed.
 
+## Preserve task-list state with read-only checkbox shapes
+
+On 2026-10-14 the operator reported a Markdown checklist rendered as bullets containing literal bracket text and
+requested visible checked/unchecked boxes without requiring inputs. Companions and HTML source snapshots now render
+source task state with static checkbox shapes and accessible state labels. The shared CSS, pattern reference and
+worked example supply this component; ordinary evidence tags retain their existing presentation. Source order,
+nesting and text remain authoritative, and literal task syntax inside code remains unchanged.
+
+The skill validator passed. A focused local fixture was rendered and visually inspected in headless Chromium at
+1440×1080: checked and empty boxes were distinguishable, long text wrapped beside the boxes, nested items retained
+separate states, and ordinary bullets and code examples kept their presentation. The component uses spans without
+inputs, handlers or focus targets. This verifies the supplied pattern, not independent agent generation or an
+exhaustive assistive-technology audit.
+
 ## Use a diagram specialist within the document companion
 
 On 2026-10-06 the operator selected diagram-design as the default specialist after three different-source comparisons
