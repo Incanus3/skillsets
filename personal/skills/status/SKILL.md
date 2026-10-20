@@ -10,7 +10,8 @@ version-control changes, or continue the workstream.
 
 ## Resolve the workstream
 
-1. Read the repository guidance and `docs/handoffs/INDEX.md`.
+1. Read the repository guidance and the handoff index file, located through that guidance or
+   the existing handoff directory convention.
 2. For `$status <n>`, accept only a positive decimal integer from the latest still-valid, non-empty
    numbered `$workstreams` overview in the same conversation. An overview remains valid across zero
    or more completed `$status <n>` exchanges only when every inspection resolved successfully from

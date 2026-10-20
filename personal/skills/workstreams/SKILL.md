@@ -10,7 +10,8 @@ workstream, or perform version-control writes.
 
 ## Collect current work
 
-1. Read repository guidance and `docs/handoffs/INDEX.md` when present.
+1. Read repository guidance and the handoff index file when present, located through that
+   guidance or the existing handoff directory convention.
 2. Read every indexed handoff. Extract its slug, recorded status, objective, first explicit next
    action, and exact linked `br` issue ID when present.
 3. When a `br` workspace exists, query live state with:

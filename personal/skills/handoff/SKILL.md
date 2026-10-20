@@ -6,7 +6,9 @@ description: "Maintain concise, short-lived workstream handoffs in `docs/handoff
 # Maintain a workstream handoff
 
 Treat the workstream slug as the public identity. Store it internally at
-`docs/handoffs/<slug>.md`, and keep `docs/handoffs/INDEX.md` synchronized.
+`docs/handoffs/<slug>.md`, and keep the handoff index file synchronized.
+Locate the index through repository guidance or the existing handoff directory convention.
+Preserve any directory guidance alongside its index entries.
 
 ## Choose the operating mode
 
@@ -102,7 +104,7 @@ if confirmation conflicts with known unfinished commitments, resolve that scope 
 
 ## Synchronize and verify
 
-Add or update one grep-friendly line in `docs/handoffs/INDEX.md` with the file link, recorded state,
+Add or update one grep-friendly line in the handoff index file with the file link, recorded state,
 purpose, and the command that uses it. Verify that linked durable references resolve and that the
 handoff contains no sensitive or duplicated canonical material.
 
