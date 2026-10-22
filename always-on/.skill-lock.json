@@ -24,9 +24,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/wshobson/agents.git",
       "skillPath": "plugins/developer-essentials/skills/code-review-excellence/SKILL.md",
-      "skillFolderHash": "01df909b77da6e637490582b2899447eed1786bd",
+      "skillFolderHash": "eb067e9432b526fe6a13cea53be60ad6f853fced",
       "installedAt": "2026-02-21T09:31:53.032Z",
-      "updatedAt": "2026-03-09T15:48:06.632Z"
+      "updatedAt": "2026-10-22T07:19:30.114Z"
     },
     "orca-cli": {
       "source": "stablyai/orca",
@@ -60,9 +60,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/cathrynlavery/diagram-design.git",
       "skillPath": "skills/diagram-design/SKILL.md",
-      "skillFolderHash": "d7d66b45810294ae98e8a2c1de72d4ce9af80616",
+      "skillFolderHash": "5407fb5a5d4593ba6f79713d1fecaad7a49dbafe",
       "installedAt": "2026-10-06T19:11:12.724Z",
-      "updatedAt": "2026-10-14T09:39:58.963Z"
+      "updatedAt": "2026-10-22T07:19:36.927Z"
     }
   },
   "dismissed": {

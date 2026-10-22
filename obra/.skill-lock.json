@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "abe5c2fed8c215d4b86b77be1d8a7d0b0562651c",
+      "skillFolderHash": "3d8a23691e919f5acfd31d45f76bdc168d24ca1b",
       "installedAt": "2026-07-11T09:47:30.743Z",
-      "updatedAt": "2026-10-14T09:41:28.669Z"
+      "updatedAt": "2026-10-22T07:19:50.444Z"
     },
     "dispatching-parallel-agents": {
       "source": "obra/superpowers",
@@ -24,9 +24,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/executing-plans/SKILL.md",
-      "skillFolderHash": "ef38c6c33e88e4248018dab6f03fc1ceda916ba0",
+      "skillFolderHash": "1374506e051a95c35f04654ebde9c5d845d7c7cb",
       "installedAt": "2026-07-11T09:47:30.755Z",
-      "updatedAt": "2026-10-14T09:41:30.394Z"
+      "updatedAt": "2026-10-22T07:19:51.730Z"
     },
     "receiving-code-review": {
       "source": "obra/superpowers",
@@ -51,9 +51,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/subagent-driven-development/SKILL.md",
-      "skillFolderHash": "a9ec528b252e536a404fd0522e32cec31094d669",
+      "skillFolderHash": "98c875856cf40765616a4565f09b437f0c58992b",
       "installedAt": "2026-07-11T09:47:30.758Z",
-      "updatedAt": "2026-10-14T09:41:34.034Z"
+      "updatedAt": "2026-10-22T07:19:53.291Z"
     },
     "systematic-debugging": {
       "source": "obra/superpowers",
@@ -105,9 +105,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/writing-skills/SKILL.md",
-      "skillFolderHash": "f761162236b19330da62b22ad0da20f5dac7c6ab",
+      "skillFolderHash": "660ede63b84ce5d07ef28cccc2973165e2ca06e2",
       "installedAt": "2026-07-11T09:47:30.764Z",
-      "updatedAt": "2026-09-22T08:15:36.182Z"
+      "updatedAt": "2026-10-22T07:19:54.539Z"
     }
   },
   "dismissed": {
