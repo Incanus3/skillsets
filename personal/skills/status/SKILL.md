@@ -5,32 +5,28 @@ description: "Report the concise recorded status of a workstream from its indexe
 
 # Report recorded workstream status
 
-Remain strictly read-only. Do not edit the handoff or index, refresh task or workspace state, make
-version-control changes, or continue the workstream.
+Remain strictly read-only. Do not edit handoffs or the index, refresh any live task, binding,
+workspace, or version-control state, enrich context, or continue work. This recorded-only boundary
+applies even when normal repository orientation requests live queries.
 
 ## Resolve the workstream
 
-1. Read the repository guidance and the handoff index file, located through that guidance or
-   the existing handoff directory convention.
+1. Read repository guidance and locate its handoff index through that guidance or the existing
+   handoff directory convention.
 2. For `$status <n>`, accept only a positive decimal integer from the latest still-valid, non-empty
-   numbered `$workstreams` overview in the same conversation. An overview remains valid across zero
-   or more completed `$status <n>` exchanges only when every inspection resolved successfully from
-   that same overview and no other user or assistant interaction intervened. A later `$workstreams`
-   response supersedes it even when the later overview is empty; any other intervening interaction
-   makes it stale. Resolve the number to the exact entry at that position:
-   - preserve a handoff-backed entry's slug and use its indexed handoff;
-   - preserve a bead-only entry's exact `br` issue ID and the status snapshot in that overview;
-   - reject an absent, stale, superseded, ambiguous, or out-of-range overview instead of
-     reconstructing or rerunning `$workstreams`.
-3. For `$status <slug>`, require an exact lowercase kebab-case slug and an exact indexed match.
-   Reject paths, `.md` suffixes, and malformed slugs. Do not fall back to similarly named entries.
-4. For bare `$status`:
-   - report that no active handoff exists when the index has no live entries;
-   - select the sole live entry when exactly one exists;
-   - when several exist, list their slugs and one-line purposes, ask the user to choose, and stop.
-5. For a handoff-backed selection, read only the selected handoff. Treat an absent file or
-   index/file mismatch as an inconsistency; report it instead of guessing. Do not query `br` for a
-   bead-only numeric selection.
+   numbered `$workstreams` overview in this conversation. It remains valid across zero or more
+   successful `$status <n>` inspections resolved from that same overview, with no other intervening
+   user or assistant interaction. Any other interaction makes it stale; a later overview supersedes
+   it even when empty. Resolve the exact entry, preserving its handoff slug or opaque qualified task
+   identity and recorded snapshot. Reject absent, stale, superseded, ambiguous, or out-of-range
+   selectors without reconstructing or rerunning the overview.
+3. For `$status <slug>`, require an exact lowercase kebab-case slug and indexed match. Reject paths,
+   `.md` suffixes, malformed slugs, and similarly named substitutes.
+4. For bare `$status`, select the sole live handoff; report none when the index has no live entries.
+   If several exist, list their slugs and one-line purposes, ask the user to choose, and stop.
+5. For a handoff-backed selection, read only that handoff after resolving it. Report an absent file
+   or index/file mismatch rather than guessing. For a task-only numeric selection, use only the
+   selected overview's snapshot; do not query a tracker or resolve its context.
 
 ## Report
 
@@ -43,11 +39,12 @@ Summarize the handoff as recorded:
 - blocker and reason, if blocked;
 - pending decision, prerequisite, or human gate.
 
-Mark missing fields as `unknown`; do not infer them from external or live state. Optionally name the
-primary durable references needed for context. Explicitly say that the result is recorded status,
-not freshly verified live state.
+Mark missing fields as `unknown`. Optionally name durable references already recorded, without
+following them to enrich the report. Keep relative or unresolved task references exactly as
+recorded; do not inspect live context to complete their identity. Explicitly identify the result
+as recorded status, not freshly verified state.
 
-For a bead-only numeric selection, report only the exact issue ID, objective, state, priority,
-`Next:` action, and warning available in the selected overview entry. Mark other requested fields as
-`unknown`. Explicitly identify the result as the selected overview's status snapshot, not freshly
-verified live state.
+For a task-only numeric selection, report only its recorded qualified identity, objective, state,
+native priority, `Next:` action, and warning. Mark other requested fields as `unknown` and label the
+result as the selected overview's status snapshot. A successful `$status <n>` read preserves that
+overview's selector mapping for another numeric inspection or resume.
