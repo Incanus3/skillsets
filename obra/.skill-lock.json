@@ -6,9 +6,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/brainstorming/SKILL.md",
-      "skillFolderHash": "3d8a23691e919f5acfd31d45f76bdc168d24ca1b",
+      "skillFolderHash": "ebd5b1afb600976b12a4c07fedd9c408c1e82f97",
       "installedAt": "2026-07-11T09:47:30.743Z",
-      "updatedAt": "2026-10-22T07:19:50.444Z"
+      "updatedAt": "2026-11-13T12:00:07.740Z"
     },
     "dispatching-parallel-agents": {
       "source": "obra/superpowers",
@@ -24,9 +24,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/executing-plans/SKILL.md",
-      "skillFolderHash": "1374506e051a95c35f04654ebde9c5d845d7c7cb",
+      "skillFolderHash": "3a8438d91d9340747ffd985fdbcfe7238d6e1e57",
       "installedAt": "2026-07-11T09:47:30.755Z",
-      "updatedAt": "2026-10-22T07:19:51.730Z"
+      "updatedAt": "2026-11-13T12:00:07.805Z"
     },
     "receiving-code-review": {
       "source": "obra/superpowers",
@@ -51,18 +51,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/subagent-driven-development/SKILL.md",
-      "skillFolderHash": "98c875856cf40765616a4565f09b437f0c58992b",
+      "skillFolderHash": "c04a61186680d4cfc6784136d0421cd4abcfb40c",
       "installedAt": "2026-07-11T09:47:30.758Z",
-      "updatedAt": "2026-10-22T07:19:53.291Z"
+      "updatedAt": "2026-11-13T12:00:07.951Z"
     },
     "systematic-debugging": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "sourceUrl": "https://github.com/obra/superpowers.git",
       "skillPath": "skills/systematic-debugging/SKILL.md",
-      "skillFolderHash": "108961c080a6837ad8a188a553e593cc5e6df62d",
+      "skillFolderHash": "774f23e27e35cb0a89ede39156e7b079fbb84190",
       "installedAt": "2026-07-11T09:47:30.759Z",
-      "updatedAt": "2026-10-14T09:41:36.409Z"
+      "updatedAt": "2026-11-13T12:00:08.017Z"
     },
     "test-driven-development": {
       "source": "obra/superpowers",
